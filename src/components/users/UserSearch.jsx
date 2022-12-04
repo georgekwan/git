@@ -12,7 +12,7 @@ function UserSearch() {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (text === '') {
-      alert('Please enter something');
+      setAlert('Please enter something', 'error');
     } else {
       searchUsers(text);
       setText('');
