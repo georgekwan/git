@@ -1,0 +1,6 @@
+{
+  "editor.formatOnType": true,
+  "cSpell.autoFormatConfigFile": false,
+  "editor.formatOnSave": true,
+  "prettier.singleQuote": true
+}
