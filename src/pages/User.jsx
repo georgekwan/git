@@ -65,6 +65,10 @@ function User() {
                   <div className="mx-1 badge badge-info">Hireable</div>
                 )}
               </h1>
+              <p>{bio}</p>
+              <div className="mt-4 card-actions">
+                <a href={html_url} target="_blank" rel="noreferrer"></a>
+              </div>
             </div>
           </div>
         </div>
