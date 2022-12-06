@@ -3,6 +3,7 @@ import { useEffect, useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { useParams } from 'react-router-dom';
 import Spinner from '../components/layout/Spinner';
+import RepoList from '../components/repos/RepoList';
 import GithubContext from '../context/github/GithubContext';
 
 function User() {
