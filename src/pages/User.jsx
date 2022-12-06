@@ -114,6 +114,10 @@ function User() {
             <div className="stat-figure text-secondary">
               <FaUsers className="text-3xl md:text-5xl" />
             </div>
+            <div className="stat-title pr-5">Followers</div>
+            <div className="stat-value pr-5 text-3xl md:text-4xl">
+              {followers}
+            </div>
           </div>
         </div>
       </div>
