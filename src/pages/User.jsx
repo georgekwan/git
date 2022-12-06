@@ -119,6 +119,16 @@ function User() {
               {followers}
             </div>
           </div>
+
+          <div className="stat">
+            <div className="stat-figure text-secondary">
+              <FaUserFriends className="text-3xl md:text-5xl" />
+            </div>
+            <div className="stat-title pr-5">Followings</div>
+            <div className="stat-value pr-5 text-3xl md:text-4xl">
+              {following}
+            </div>
+          </div>
         </div>
       </div>
     </>
