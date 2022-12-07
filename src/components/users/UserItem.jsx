@@ -1,5 +1,6 @@
-import { Link } from 'react-router-dom';
+import React from 'react';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 
 function UserItem({ user: { login, avatar_url } }) {
   return (
@@ -8,7 +9,7 @@ function UserItem({ user: { login, avatar_url } }) {
         <div>
           <div className="avatar">
             <div className="rounded-full shadow w-14 h-14">
-              <img src={avatar_url} alt="Profile" />
+              <img src={avatar_url} alt="profile avatar" />
             </div>
           </div>
         </div>
@@ -26,6 +27,8 @@ function UserItem({ user: { login, avatar_url } }) {
   );
 }
 
-UserItem.propTypes = { user: PropTypes.object.isRequired };
+UserItem.propTypes = {
+  user: PropTypes.object.isRequired,
+};
 
 export default UserItem;

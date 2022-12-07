@@ -1,3 +1,4 @@
+import React from 'react';
 import { useState, useContext } from 'react';
 import GithubContext from '../../context/github/GithubContext';
 import AlertContext from '../../context/alert/AlertContext';
@@ -5,11 +6,14 @@ import { searchUsers } from '../../context/github/GithubActions';
 
 function UserSearch() {
   const [text, setText] = useState('');
-  const { users, dispatch } = useContext(GithubContext);
-  const { setAlert } = useContext(AlertContext);
+
+  // destructure event param to obtain live value and circumvent delay in state refresh
   const handleChange = ({ target: { value } }) => {
     setText(value);
   };
+
+  const { users, dispatch } = useContext(GithubContext);
+  const { setAlert } = useContext(AlertContext);
 
   const handleSubmit = async (event) => {
     event.preventDefault();
