@@ -66,7 +66,6 @@ export const GithubProvider = ({ children }) => {
       value={{
         ...state,
         dispatch,
-        searchUsers,
         clearUsers,
         getUser,
         getUserRepos,
