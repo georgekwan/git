@@ -10,14 +10,17 @@ function UserSearch() {
   const handleChange = ({ target: { value } }) => {
     setText(value);
   };
-  const handleSubmit = async (e) => {
-    e.preventDefault();
+
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+
     if (text === '') {
-      setAlert('Please enter something', 'error');
+      setAlert('Please Enter Search Terms', 'error');
     } else {
       dispatch({ type: 'SET_LOADING' });
       const users = await searchUsers(text);
       dispatch({ type: 'GET_USERS', payload: users });
+
       setText('');
     }
   };
@@ -48,8 +51,8 @@ function UserSearch() {
       {users.length > 0 && (
         <div>
           <button
-            onClick={{ type: 'CLEAR_USERS' }}
             className="btn btn-ghost btn-lg"
+            onClick={() => dispatch({ type: 'CLEAR_USERS' })}
           >
             Clear
           </button>
