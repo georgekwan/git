@@ -5,6 +5,7 @@ import { useParams } from 'react-router-dom';
 import Spinner from '../components/layout/Spinner';
 import RepoList from '../components/repos/RepoList';
 import GithubContext from '../context/github/GithubContext';
+import { getUser, getUserRepos } from '../context/github/GitubActions';
 
 function User() {
   const { getUser, user, loading, getUserRepos, repos } =
