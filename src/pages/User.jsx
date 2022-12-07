@@ -41,16 +41,16 @@ function User() {
   return (
     <>
       <div className="w-full mx-auto lg:w-10/12">
-        <div className="mb-4">
+        <div className="mb4">
           <Link to="/" className="btn btn-ghost">
-            Back To Search
+            Back to Search
           </Link>
         </div>
         <div className="grid grid-cols-1 xl:grid-cols-3 lg:grid-cols-3 md:grid-cols-3 mb-8 md:gap-8">
           <div className="custom-card-image mb-6 md:mb-0">
-            <div className="round-lg shadow-xl card image-full">
+            <div className="rounded-lg shadow-xl card image-full">
               <figure>
-                <img src={avatar_url} alt="" />
+                <img src={avatar_url} alt="Github profile avatar" />
               </figure>
               <div className="card-body justify-end">
                 <h2 className="card-title mb-0">{name}</h2>
@@ -80,6 +80,12 @@ function User() {
               </div>
             </div>
             <div className="w-full rounded-lg shadow-md bg-base-100 stats">
+              {location && (
+                <div className="stat">
+                  <div className="stat-title text-md">Location</div>
+                  <div className="text-lg stat-value">{location}</div>
+                </div>
+              )}
               {blog && (
                 <div className="stat">
                   <div className="stat-title text-md">Website</div>
@@ -96,14 +102,14 @@ function User() {
               )}
               {twitter_username && (
                 <div className="stat">
-                  <div className="stat-title text-md">Twitter </div>
+                  <div className="stat-title text-md">Twitter</div>
                   <div className="text-lg stat-value">
                     <a
                       href={`https://twitter.com/${twitter_username}`}
                       target="_blank"
                       rel="noreferrer"
                     >
-                      {twitter_username}
+                      @{twitter_username}
                     </a>
                   </div>
                 </div>
@@ -121,7 +127,6 @@ function User() {
               {followers}
             </div>
           </div>
-
           <div className="stat">
             <div className="stat-figure text-secondary">
               <FaUserFriends className="text-3xl md:text-5xl" />
@@ -131,7 +136,7 @@ function User() {
               {following}
             </div>
           </div>
-
+          // ! issue
           <div className="stat">
             <div className="stat-figure text-secondary">
               <FaCodepen className="text-3xl md:text-5xl" />
@@ -141,7 +146,6 @@ function User() {
               {public_repos}
             </div>
           </div>
-
           <div className="stat">
             <div className="stat-figure text-secondary">
               <FaStore className="text-3xl md:text-5xl" />
@@ -152,7 +156,6 @@ function User() {
             </div>
           </div>
         </div>
-
         <RepoList repos={repos} />
       </div>
     </>
