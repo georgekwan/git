@@ -1,4 +1,5 @@
-## Available Scripts
+## Github Finder App
+App to search Github users and display their info. 
 
 In the project directory, you can run:
 
