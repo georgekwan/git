@@ -2,6 +2,10 @@
 
 This React app allows users to search for GitHub users by username, using the GitHub REST API. The app is built with Tailwind CSS for styling and Daisy UI for user interface components.
 
+## Screenshots
+
+![App Screenshot](https://i.imgur.com/ayEBvdd.gif)
+
 ## Getting Started
 
 1. Clone this repository
