@@ -2,5 +2,10 @@
   "editor.formatOnType": true,
   "cSpell.autoFormatConfigFile": false,
   "editor.formatOnSave": true,
-  "prettier.singleQuote": true
+  "prettier.singleQuote": true,
+  "workbench.colorCustomizations": {
+    "activityBar.background": "#591028",
+    "titleBar.activeBackground": "#7D1638",
+    "titleBar.activeForeground": "#FEFBFC"
+  }
 }
